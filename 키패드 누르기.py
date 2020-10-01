@@ -32,8 +32,8 @@
 def solution(numbers, hand):
     answer = []
     
-    x_loc= [4,1,1,1,2,2,2,3,3,3]
-    y_loc= [2,1,2,3,1,2,3,1,2,3]
+    x_loc= [4, 1, 1, 1, 2, 2, 2, 3, 3, 3]
+    y_loc= [2, 1, 2, 3, 1, 2, 3, 1, 2, 3]
 
     lft_x = [4]
     lft_y = [1]
@@ -69,6 +69,6 @@ def solution(numbers, hand):
                     rgh_y.append(y_loc[i])
     return answer
 
-solution([1,3,4,5,8,2,1,4,5,9,5], 'right')
-solution([7,0,8,2,8,3,1,5,7,6,2], 'left')
+solution([1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5], 'right')
+solution([7, 0, 8, 2, 8, 3, 1, 5, 7, 6, 2], 'left')
 solution([1, 2, 3, 4, 5, 6, 7, 8, 9, 0], 'right')
