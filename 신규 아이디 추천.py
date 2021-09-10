@@ -41,4 +41,3 @@ solution("=.=") == "aaa"
 solution("123_.def") == "123_.def"
 solution("abcdefghijklmn.p") == 	"abcdefghijklmn"
 
-
