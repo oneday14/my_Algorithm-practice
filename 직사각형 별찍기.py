@@ -5,8 +5,6 @@
 # 제한 조건
 # n과 m은 각각 1000 이하인 자연수입니다.
 
-def solution(n, m):
-    for i in range(m) :
-        print('*' * n)
-
-solution(5, 3)
+a, b = map(int, input().strip().split(' '))
+for i in range(b) :
+    print('*' * a)
