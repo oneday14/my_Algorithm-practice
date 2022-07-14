@@ -10,15 +10,12 @@
 # - 첫 번째 글자는 0번째 인덱스로 보아 짝수번째 알파벳으로 처리해야 합니다.
 
 def solution(s):
-    lst = s.split()
-    answer = ''
-    for i in lst :
-        for j in range(len(i)) :
-            if j % 2 == 0 :
-                answer = answer + i[j].upper()
-            else :
-                answer = answer + i[j].lower()
-        answer = answer + ' '
+    lst = s.split(' ')
+    answer = []
+    for i in lst:
+        in_lst = ''.join([i[idx].upper() if idx%2==0 else i[idx].lower() for idx in range(len(i))])
+        answer.append(in_lst)
+    answer = ' '.join(answer)
     return answer
 
-solution('try hello world')
+solution('try hello world')     # "TrY HeLlO WoRlD"
