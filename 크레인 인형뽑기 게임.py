@@ -39,6 +39,7 @@
 def solution(board, moves):
     box = []
     k = 0
+    cnt = 0
     for i in moves :
         for j in board :
             if j[i-1] != 0 :
@@ -50,7 +51,8 @@ def solution(board, moves):
             box.pop(k)
             box.pop(k)
             k = -1
+            cnt += 2
         k += 1
-    return box
+    return cnt
 
-solution([[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]], [1,5,3,5,1,2,1,4])
+solution([[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]], [1,5,3,5,1,2,1,4])  # 4
