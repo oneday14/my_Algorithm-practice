@@ -4,18 +4,13 @@
 # 제한 사항
 # - n은 0 이상 3000이하인 정수입니다.
 
-def solution(n) :
-    if n >= 0 and n <= 3000 :
-        a1 = 0
-        for i in range(1, n+1) :
-            if n % i == 0 :
-                a1 = a1 + i
-            else :
-                pass
-            answer = a1
-    else :
-        answer = '잘못입력하였습니다'
+def solution(n):
+    answer = 0
+    for i in range(1, n+1):
+        if n % i == 0: 
+            answer += i
     return answer
 
-solution(12)
-solution(5)
+solution(12)    # 28
+solution(5)     # 6
+
