@@ -12,12 +12,18 @@
 # - 참가자 중에는 동명이인이 있을 수 있습니다.
 
 def solution(participant, completion):
-    for i in participant :
-        if participant.count(i) == 2 and completion.count(i) == 1:
-            answer = i
-        elif not i in completion :
-            answer = i
+    participant = sorted(participant)
+    completion = sorted(completion)
+    answer = ''
+    for idx in range(len(completion)):
+        if participant[idx] != completion[idx]:
+            answer = participant[idx]
+            break
+        
+    if answer == '':
+        answer = participant[-1]
     return answer
+
 
 solution(['leo', 'kiki', 'eden'], ['eden', 'kiki'])
 solution(['marina', 'josipa', 'nikola', 'vinko', 'filipa'], ['josipa', 'filipa', 'marina', 'nikola'])
